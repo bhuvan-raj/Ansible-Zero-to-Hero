@@ -51,7 +51,11 @@ This repository is meticulously organized into key sections, progressing from fu
   * **Description:** Ansible Galaxy is the central, public repository for the Ansible community, serving as the essential hub for discovering, sharing, and installing reusable automation content. It accelerates projects by providing pre-built components like Roles (self-contained units of configuration) and the newer, more comprehensive Collections (which bundle roles, modules, plugins, and documentation).
   * **Explore:** Navigate to [Ansible Galaxy](./Ansible%20Galaxy/) for detailed information.
 
-  
+### 9. Ansible Role Import Lab
+
+* **Description:** This lab demonstrates how to create an Ansible Role, structure it properly using standard role directories, test it locally, push it to GitHub, and import it into Ansible Galaxy using the latest Galaxy UI. Students will learn how reusable automation components are shared and distributed through Ansible Galaxy for real-world infrastructure automation.
+* **Explore:** Navigate to [Ansible Role Import Lab](./Ansible-Role-Import) for detailed information.
+
 
 -----
 
