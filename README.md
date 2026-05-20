@@ -56,6 +56,10 @@ This repository is meticulously organized into key sections, progressing from fu
 * **Description:** This lab demonstrates how to create an Ansible Role, structure it properly using standard role directories, test it locally, push it to GitHub, and import it into Ansible Galaxy using the latest Galaxy UI. Students will learn how reusable automation components are shared and distributed through Ansible Galaxy for real-world infrastructure automation.
 * **Explore:** Navigate to [Ansible Role Import Lab](./Ansible-Role-Import) for detailed information.
 
+### 10. Ansible Collections Lab
+
+* **Description:** This lab demonstrates how to create an Ansible Collection, structure it using the standard collection directory layout, add roles and playbooks, test the collection locally, build the collection artifact, push it to GitHub, and publish it to Ansible Galaxy using the latest Galaxy UI. Students will learn how reusable automation content such as roles, modules, plugins, and playbooks are packaged and distributed through collections for real-world infrastructure automation.
+* **Explore:** Navigate to [Ansible Collections Lab](./Ansible-Collections) for detailed information.
 
 -----
 
