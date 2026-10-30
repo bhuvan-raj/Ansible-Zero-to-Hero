@@ -1,65 +1,91 @@
-## Ansible Zero-to-Hero
+# Ansible Zero-to-Hero
 
-<img src="https://github.com/bhuvan-raj/Ansible-Zero-to-Hero/blob/main/assets/ansible.webp" alt="Banner" />
+<img src="https://github.com/bhuvan-raj/Ansible-Zero-to-Hero/blob/main/assets/ansible.webp" alt="Ansible Banner" />
 
-This repository is a comprehensive learning resource for students and professionals looking to master **Ansible**, the powerful, agentless IT automation engine. Start your journey from configuration management concepts to advanced playbook creation.
+[![Ansible][badge-ansible]][ansible-site]
+[![Modules][badge-modules]](#modules)
+[![License: MIT][badge-license]][license]
+[![PRs Welcome][badge-prs]][contributing]
 
------
+A hands-on learning resource for mastering **Ansible**, the agentless IT automation engine. It takes you from Configuration Management fundamentals to roles, collections, secrets management, and real-world automation.
 
-## Repository Structure
+---
 
-This repository is meticulously organized into key sections, progressing from fundamental concepts to practical application and core automation logic. Each top-level folder contains its own dedicated $\text{README.md}$ file, providing in-depth explanations, examples, and usage instructions for the content within.
+## Quick Start
 
-### 1\. Introduction to CM and Ansible
+```bash
+git clone https://github.com/bhuvan-raj/Ansible-Zero-to-Hero.git
+cd Ansible-Zero-to-Hero
+```
 
-  * **Description:** A foundational guide covering **Configuration Management (CM)** principles, the need for automation, and what makes **Ansible** unique (agentless architecture, simplicity, security).
-  * **Explore:** Navigate to [Introduction to CM and Ansible](./Introduction%20to%20CM%20and%20Ansible/) for detailed information.
+Pick a module below and follow its `README.md`. New here? Read [Prerequisites][prereqs] and the [Learning Path][path] first.
 
-### 2\. Managed Nodes and Inventory Management
+---
 
-  * **Description:** Learn how Ansible identifies and connects to the machines it manages. This section focuses on setting up your **Control Node**, configuring **SSH keys**, and mastering the **Inventory** file (static and dynamic).
-  * **Explore:** Navigate to [Managed Nodes and Inventory Management](./Managed%20Nodes%20and%20Inventory%20Management/) for detailed information.
+## Modules
 
-### 3\. Management of EC2 Instances
+| #  | Module | What you'll learn |
+|----|--------|-------------------|
+| 01 | [Introduction to CM and Ansible][m01] | CM fundamentals, agentless architecture, SSH, YAML |
+| 02 | [Managed Nodes and Inventory][m02] | Control/managed nodes, static & dynamic inventory, groups |
+| 03 | [Management of EC2 Instances][m03] | AWS auth, dynamic inventory, cloud modules |
+| 04 | [Ad-Hoc Commands][m04] | One-off operations: packages, services, files |
+| 05 | [Introduction to Playbooks][m05] | Plays, tasks, handlers, privilege escalation, idempotency |
+| 06 | [Variables, Facts and Conditions][m06] | Variables, registered vars, facts, conditionals |
+| 07 | [Nginx Website Hosting Lab][m07] | Hands-on: install Nginx, deploy a site, use handlers |
+| 08 | [Ansible Roles][m08] | Role structure: tasks, handlers, templates, defaults |
+| 09 | [Ansible Galaxy][m09] | Discover, install, and use community roles/collections |
+| 10 | [Role Import Lab][m10] | Build, test, publish, and import a role into Galaxy |
+| 11 | [Ansible Collections][m11] | Collection structure, namespaces, plugins |
+| 12 | [Collections Lab][m12] | Build and publish a collection to Galaxy |
+| 13 | [Vault and Secret Management][m13] | Encrypt files and variables, manage Vault passwords |
 
-  * **Description:** Apply your inventory knowledge to a real-world cloud environment. This section details how to dynamically discover, provision, and manage **AWS EC2 instances** using Ansible's cloud-specific modules.
-  * **Explore:** Navigate to [Management of EC2 Instances](./Management%20of%20EC2%20Instances/) for detailed information.
+> Full progression, dependencies between modules, and lab markers: [Learning Path][path].
 
-### 4\. Ansible Ad-Hoc Commands
+---
 
-  * **Description:** Master the art of executing quick, one-off commands across your infrastructure. This section is a hands-on guide to using various **Ansible Modules** directly from the command line for tasks like checking status or restarting services.
-  * **Explore:** Navigate to [Ansible Ad-Hoc Commands](./Ansible%20Ad-Hoc%20Commands/) for detailed information.
+## More Docs
 
-### 5\. Introduction to Playbooks
+| Doc | Purpose |
+|-----|---------|
+| [Prerequisites][prereqs] | Skills and tools to have before starting |
+| [Getting Started][start] | Clone, set up, and work through a module |
+| [Learning Path][path] | Recommended order and what each stage unlocks |
+| [Contributing][contributing] | How to report issues and submit PRs |
 
-  * **Description:** The heart of Ansible automation. This crucial section introduces the structure of **Playbooks** (written in YAML), defining **Plays** and **Tasks**, using **Handlers**, and understanding the importance of idempotency.
-  * **Explore:** Navigate to [Introduction to Playbooks](./Introduction%20to%20Playbooks/) for detailed information.
+---
 
-### 6\. Nginx Website Hosting Lab
+## License
 
-* **Description:** This hands-on lab demonstrates how to automate website hosting using Ansible and Nginx. You will learn how to create and execute Playbooks written in YAML, define **Plays** and **Tasks**, use **Handlers** for service management, manage file permissions, and understand the importance of **Idempotency** in automation. The lab covers installing Nginx, deploying a static website, configuring services, and verifying the deployment on a remote Linux server.
-* **Explore:** Navigate to [Nginx Website Hosting Lab](./hosting-website/) for the complete step-by-step lab guide and detailed explanations.
+Released under the [MIT License][license].
 
+**Happy Learning! Automate Everything with Ansible.** 🚀
 
+<!-- Badges -->
+[badge-ansible]: https://img.shields.io/badge/Ansible-Automation-EE0000?logo=ansible&logoColor=white
+[badge-modules]: https://img.shields.io/badge/Modules-13-blue
+[badge-license]: https://img.shields.io/badge/License-MIT-green.svg
+[badge-prs]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
 
-### 7\. Ansible Roles
+<!-- Links -->
+[ansible-site]: https://www.ansible.com/
+[license]: ./LICENSE
+[prereqs]: ./docs/prerequisites.md
+[start]: ./docs/getting-started.md
+[path]: ./docs/learning-path.md
+[contributing]: ./docs/contributing.md
 
-  * **Description:** Roles provide the essential organizational framework for large-scale Ansible projects. They enforce a standardized directory structure to group all related automation assets (tasks, handlers, files, and variables) into reusable units. Mastering roles is the key to writing modular, shareable, and maintainable automation.
-  * **Explore:** Navigate to [Ansible Roles](./Ansible%20Roles/) for detailed information.
-### 8\. Ansible Galaxy
-
-  * **Description:** Ansible Galaxy is the central, public repository for the Ansible community, serving as the essential hub for discovering, sharing, and installing reusable automation content. It accelerates projects by providing pre-built components like Roles (self-contained units of configuration) and the newer, more comprehensive Collections (which bundle roles, modules, plugins, and documentation).
-  * **Explore:** Navigate to [Ansible Galaxy](./Ansible%20Galaxy/) for detailed information.
-
-### 9. Ansible Role Import Lab
-
-* **Description:** This lab demonstrates how to create an Ansible Role, structure it properly using standard role directories, test it locally, push it to GitHub, and import it into Ansible Galaxy using the latest Galaxy UI. Students will learn how reusable automation components are shared and distributed through Ansible Galaxy for real-world infrastructure automation.
-* **Explore:** Navigate to [Ansible Role Import Lab](./Ansible-Role-Import) for detailed information.
-
-### 10. Ansible Collections Lab
-
-* **Description:** This lab demonstrates how to create an Ansible Collection, structure it using the standard collection directory layout, add roles and playbooks, test the collection locally, build the collection artifact, push it to GitHub, and publish it to Ansible Galaxy using the latest Galaxy UI. Students will learn how reusable automation content such as roles, modules, plugins, and playbooks are packaged and distributed through collections for real-world infrastructure automation.
-* **Explore:** Navigate to [Ansible Collections Lab](./Ansible-Collections) for detailed information.
-
------
-
+<!-- Modules -->
+[m01]: ./Introduction%20to%20CM%20and%20Ansible/
+[m02]: ./Managed%20Nodes%20and%20Inventory%20Management/
+[m03]: ./Management%20of%20EC2%20Instances/
+[m04]: ./Ansible%20Ad-Hoc%20Commands/
+[m05]: ./Introduction%20to%20Playbooks/
+[m06]: ./Variables,%20Facts%20and%20Conditions/
+[m07]: ./hosting-website/
+[m08]: ./Ansible%20Roles/
+[m09]: ./Ansible%20Galaxy/
+[m10]: ./Ansible-Role-Import/
+[m11]: ./Ansible%20Collections/
+[m12]: ./Ansible-Collections/
+[m13]: ./Ansible%20Vault%20and%20SecretManagement/
